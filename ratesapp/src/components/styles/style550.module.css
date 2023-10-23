@@ -1,0 +1,20 @@
+.box__rate {
+    background: #C71585;
+    height: 70px;
+    font-size: 36px;
+    border: 1px solid white;
+}
+
+.box__price {
+    background: #FF69B4;
+    height: 300px;
+    font-size: 120px;
+}
+
+.box__rate,
+.box__price {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+}
