@@ -1,12 +1,15 @@
 import './rate.scss';
+import React, { useState } from "react";
 
 function Rate(props) {
-    const { price, speed, showChoice } = props;
-    const theme = props.theme;
-    let rateCard = "";
-    if (showChoice) rateCard = "choice";
+    const { price, speed, theme } = props;
+    const [selected, setSelected] = useState(false);
+
+    const handleChange = () => {
+        setSelected(!selected);
+    }
     return (
-        <div className={`box ${rateCard}`}>
+        <div className={selected ? 'choice' : 'box'} onClick={handleChange}>
             <div className={theme.box__rate}>Безлимитный {price}</div>
             <div className={theme.box__price}>
                 {price}

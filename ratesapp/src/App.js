@@ -10,24 +10,26 @@ const list = [
   {
     speed: 10,
     theme: themeA,
-    price: 300
-
+    price: 300,
+    id: 1
   },
   {
     speed: 50,
     theme: themeB,
-    price: 450
+    price: 450,
+    id: 2
   },
   {
     speed: 100,
     theme: themeC,
-    showChoice: true,
-    price: 550
+    price: 550,
+    id: 3
   },
   {
     speed: 200,
     theme: themeD,
-    price: 1000
+    price: 1000,
+    id: 4
   }
 ]
 
@@ -36,7 +38,7 @@ function App() {
     <div className="App">
       {
         list.map((rate) =>
-          <Rate price={rate.price} speed={rate.speed} theme={rate.theme} showChoice={rate.showChoice}></Rate>
+          <Rate price={rate.price} speed={rate.speed} theme={rate.theme} key={rate.id} />
         )
       }
     </div>
